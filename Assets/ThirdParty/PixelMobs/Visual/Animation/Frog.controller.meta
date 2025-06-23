@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 871b035ca09729345ae60314c2c024b1
+labels:
+- Mob
+- Animation
+NativeFormatImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 54995
+  packageName: Pixel Mobs
+  packageVersion: 1.0
+  assetPath: Assets/PixelMobs/Visual/Animation/Frog.controller
+  uploadId: 239015

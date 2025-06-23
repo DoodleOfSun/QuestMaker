@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c51029cd61db3fd42889e26fffec2206
+labels:
+- Mob
+- Animation
+NativeFormatImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 54995
+  packageName: Pixel Mobs
+  packageVersion: 1.0
+  assetPath: Assets/PixelMobs/Visual/Animation/Machine.controller
+  uploadId: 239015

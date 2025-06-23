@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 287aa042a9e4e744588d84f55e1a47af
+labels:
+- Mob
+- Animation
+NativeFormatImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 54995
+  packageName: Pixel Mobs
+  packageVersion: 1.0
+  assetPath: Assets/PixelMobs/Visual/Animation/Earth.controller
+  uploadId: 239015

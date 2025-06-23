@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 96000451519eb3f4dbd9e043b9b979f6
+labels:
+- Mob
+- Animation
+NativeFormatImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 54995
+  packageName: Pixel Mobs
+  packageVersion: 1.0
+  assetPath: Assets/PixelMobs/Visual/Animation/Chicken.controller
+  uploadId: 239015

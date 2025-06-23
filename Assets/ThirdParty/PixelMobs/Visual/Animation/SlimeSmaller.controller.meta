@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 19e8e7cbb55381d47a96b20eb4b65e68
+labels:
+- Mob
+- Animation
+NativeFormatImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 54995
+  packageName: Pixel Mobs
+  packageVersion: 1.0
+  assetPath: Assets/PixelMobs/Visual/Animation/SlimeSmaller.controller
+  uploadId: 239015

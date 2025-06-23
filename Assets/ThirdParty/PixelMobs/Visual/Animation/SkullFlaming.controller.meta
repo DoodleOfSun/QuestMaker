@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 5e5edba4d4666584aa18cf5833cbed57
+labels:
+- Mob
+- Animation
+NativeFormatImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 54995
+  packageName: Pixel Mobs
+  packageVersion: 1.0
+  assetPath: Assets/PixelMobs/Visual/Animation/SkullFlaming.controller
+  uploadId: 239015

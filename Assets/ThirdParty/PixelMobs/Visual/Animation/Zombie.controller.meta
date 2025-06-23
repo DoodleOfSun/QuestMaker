@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 99bd6631294e0184894461f4b3e6beb1
+labels:
+- Mob
+- Animation
+NativeFormatImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 54995
+  packageName: Pixel Mobs
+  packageVersion: 1.0
+  assetPath: Assets/PixelMobs/Visual/Animation/Zombie.controller
+  uploadId: 239015

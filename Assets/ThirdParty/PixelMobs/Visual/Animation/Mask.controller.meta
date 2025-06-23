@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 39c4f7af76b8f1541a9c83d758de641c
+labels:
+- Mob
+- Animation
+timeCreated: 1434895989
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 54995
+  packageName: Pixel Mobs
+  packageVersion: 1.0
+  assetPath: Assets/PixelMobs/Visual/Animation/Mask.controller
+  uploadId: 239015

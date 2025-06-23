@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 79a28cd4e70d5e24e8c1b0a6faddda4d
+labels:
+- Mob
+- Animation
+NativeFormatImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 54995
+  packageName: Pixel Mobs
+  packageVersion: 1.0
+  assetPath: Assets/PixelMobs/Visual/Animation/Dwarf.controller
+  uploadId: 239015

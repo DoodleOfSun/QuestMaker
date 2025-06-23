@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 2a6cedde305a2ba408282738fa29ede3
+labels:
+- Mob
+- Animation
+NativeFormatImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 54995
+  packageName: Pixel Mobs
+  packageVersion: 1.0
+  assetPath: Assets/PixelMobs/Visual/Animation/EarthSmaller.controller
+  uploadId: 239015

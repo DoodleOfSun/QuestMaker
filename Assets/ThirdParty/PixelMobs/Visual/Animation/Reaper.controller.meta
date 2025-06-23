@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d900b2c50e85bad469cc6930d52b888a
+labels:
+- Mob
+- Animation
+NativeFormatImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 54995
+  packageName: Pixel Mobs
+  packageVersion: 1.0
+  assetPath: Assets/PixelMobs/Visual/Animation/Reaper.controller
+  uploadId: 239015

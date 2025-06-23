@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 86f0306b0500633439f9d78e94ba96cf
+labels:
+- Mob
+- Animation
+NativeFormatImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 54995
+  packageName: Pixel Mobs
+  packageVersion: 1.0
+  assetPath: Assets/PixelMobs/Visual/Animation/Tentacle.controller
+  uploadId: 239015

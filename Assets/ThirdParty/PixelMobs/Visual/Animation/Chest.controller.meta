@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7a092d716cc93754b892d5ed456b66fc
+labels:
+- Mob
+- Animation
+NativeFormatImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 54995
+  packageName: Pixel Mobs
+  packageVersion: 1.0
+  assetPath: Assets/PixelMobs/Visual/Animation/Chest.controller
+  uploadId: 239015

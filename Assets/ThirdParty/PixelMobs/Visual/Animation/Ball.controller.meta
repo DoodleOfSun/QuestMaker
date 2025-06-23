@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a55eb436c2b39544ab9ac95abbd3fb28
+labels:
+- Mob
+- Animation
+NativeFormatImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 54995
+  packageName: Pixel Mobs
+  packageVersion: 1.0
+  assetPath: Assets/PixelMobs/Visual/Animation/Ball.controller
+  uploadId: 239015

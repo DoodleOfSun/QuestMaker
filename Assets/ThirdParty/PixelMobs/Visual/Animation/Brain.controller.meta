@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d7d1d02af4e4fc740812b3b1671a3023
+labels:
+- Mob
+- Animation
+NativeFormatImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 54995
+  packageName: Pixel Mobs
+  packageVersion: 1.0
+  assetPath: Assets/PixelMobs/Visual/Animation/Brain.controller
+  uploadId: 239015

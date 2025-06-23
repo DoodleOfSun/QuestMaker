@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ab8372130753bdb479763481d18a9f83
+labels:
+- Mob
+- Animation
+NativeFormatImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 54995
+  packageName: Pixel Mobs
+  packageVersion: 1.0
+  assetPath: Assets/PixelMobs/Visual/Animation/Cloud.controller
+  uploadId: 239015

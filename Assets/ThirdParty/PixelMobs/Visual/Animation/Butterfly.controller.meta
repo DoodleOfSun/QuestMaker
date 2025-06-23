@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ab66ab46564a61241914434b78645066
+labels:
+- Mob
+- Animation
+NativeFormatImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 54995
+  packageName: Pixel Mobs
+  packageVersion: 1.0
+  assetPath: Assets/PixelMobs/Visual/Animation/Butterfly.controller
+  uploadId: 239015

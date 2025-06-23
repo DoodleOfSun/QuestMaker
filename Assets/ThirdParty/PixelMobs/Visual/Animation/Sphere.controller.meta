@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 80625adad43ab7f4bb6e6f6e54910306
+labels:
+- Mob
+- Animation
+NativeFormatImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 54995
+  packageName: Pixel Mobs
+  packageVersion: 1.0
+  assetPath: Assets/PixelMobs/Visual/Animation/Sphere.controller
+  uploadId: 239015

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: dcc7e2335e4ab4140ad0f61faae85ff7
+labels:
+- Mob
+- Animation
+NativeFormatImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 54995
+  packageName: Pixel Mobs
+  packageVersion: 1.0
+  assetPath: Assets/PixelMobs/Visual/Animation/FireSmall.controller
+  uploadId: 239015

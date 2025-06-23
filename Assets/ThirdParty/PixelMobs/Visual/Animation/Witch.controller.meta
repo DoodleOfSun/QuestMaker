@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 261053734ba2a344ba192f3abb05298c
+labels:
+- Mob
+- Animation
+NativeFormatImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 54995
+  packageName: Pixel Mobs
+  packageVersion: 1.0
+  assetPath: Assets/PixelMobs/Visual/Animation/Witch.controller
+  uploadId: 239015

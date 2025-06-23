@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: afa8e1a6ed0dc664c85eb521ebe3bad5
+labels:
+- Mob
+- Animation
+NativeFormatImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 54995
+  packageName: Pixel Mobs
+  packageVersion: 1.0
+  assetPath: Assets/PixelMobs/Visual/Animation/SkullSmall.controller
+  uploadId: 239015

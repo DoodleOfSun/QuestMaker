@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 845be183ce1d37941b360f1ba0ca132e
+labels:
+- Mob
+- Animation
+NativeFormatImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 54995
+  packageName: Pixel Mobs
+  packageVersion: 1.0
+  assetPath: Assets/PixelMobs/Visual/Animation/Mummy.controller
+  uploadId: 239015

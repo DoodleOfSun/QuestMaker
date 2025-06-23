@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 36a8baf5c2442b04e9e17b921e89dc32
+labels:
+- Mob
+- Animation
+NativeFormatImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 54995
+  packageName: Pixel Mobs
+  packageVersion: 1.0
+  assetPath: Assets/PixelMobs/Visual/Animation/ElementalOrb.controller
+  uploadId: 239015

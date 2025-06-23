@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 47eda0f91c4ce45499a0f9d92653d916
+labels:
+- Mob
+- Animation
+NativeFormatImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 54995
+  packageName: Pixel Mobs
+  packageVersion: 1.0
+  assetPath: Assets/PixelMobs/Visual/Animation/SlimeSquareSmall.controller
+  uploadId: 239015

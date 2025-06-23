@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f10f0fe54a621a8428ec73088fa139e8
+labels:
+- Mob
+- Animation
+NativeFormatImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 54995
+  packageName: Pixel Mobs
+  packageVersion: 1.0
+  assetPath: Assets/PixelMobs/Visual/Animation/Puddle.controller
+  uploadId: 239015

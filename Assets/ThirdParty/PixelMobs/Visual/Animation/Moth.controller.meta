@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f8183f246b61aca4a82c826da6aeb1f6
+labels:
+- Mob
+- Animation
+NativeFormatImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 54995
+  packageName: Pixel Mobs
+  packageVersion: 1.0
+  assetPath: Assets/PixelMobs/Visual/Animation/Moth.controller
+  uploadId: 239015

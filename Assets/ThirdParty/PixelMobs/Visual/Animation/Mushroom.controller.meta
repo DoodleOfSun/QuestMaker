@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 798ee145faa1a374484c7d00b5c04275
+labels:
+- Mob
+- Animation
+NativeFormatImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 54995
+  packageName: Pixel Mobs
+  packageVersion: 1.0
+  assetPath: Assets/PixelMobs/Visual/Animation/Mushroom.controller
+  uploadId: 239015

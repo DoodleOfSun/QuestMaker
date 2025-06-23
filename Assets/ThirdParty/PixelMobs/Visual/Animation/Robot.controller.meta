@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b272e94401f623b40a65ac751ce90711
+labels:
+- Mob
+- Animation
+NativeFormatImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 54995
+  packageName: Pixel Mobs
+  packageVersion: 1.0
+  assetPath: Assets/PixelMobs/Visual/Animation/Robot.controller
+  uploadId: 239015
