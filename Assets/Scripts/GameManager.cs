@@ -15,6 +15,10 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
         }
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+        }
 
         optionPanel = GameObject.Find("OptionPanel");
         GameObject fadeObj = GameObject.Find("Image_FadeOut");
