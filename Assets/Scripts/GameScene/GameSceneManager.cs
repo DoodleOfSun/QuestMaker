@@ -10,6 +10,8 @@ public class GameSceneManager : MonoBehaviour
     public GameObject scrollLimit2;
     public GameObject scrollMovingSpot;
 
+    public GameObject slime;
+
     public int questLimitNumber = 3;    // 최대 퀘스트 제한
     private int currentQuestNumber = 0; // 현제 퀘스트 숫자
 
@@ -41,7 +43,7 @@ public class GameSceneManager : MonoBehaviour
                 // 몬스터 클릭한 경우
                 if (hit.collider.name.Contains("Monster") && currentQuestNumber <= questLimitNumber)
                 {
-                    MonsterAction(hit.collider.gameObject);
+                    MonsterClickAction(hit.collider.gameObject);
                     return;
                 }
             }
@@ -65,8 +67,18 @@ public class GameSceneManager : MonoBehaviour
                 // 두루마리를 클릭함
                 else if(hit.collider.name.Equals("Scroll(Clone)"))
                 {
-                    Destroy(hit.collider.gameObject); // 두루마리 제거
-                    Instantiate(openedScroll, new Vector2(mousePos.x, mousePos.y + 0.5f), Quaternion.identity);
+
+                    Scroll scroll = hit.collider.gameObject.GetComponent<Scroll>();
+                    GameObject newOpenScroll = Instantiate(openedScroll, new Vector2(mousePos.x, mousePos.y + 0.5f), Quaternion.identity);
+
+                    if (scroll.targetMonster.name.Contains("Slime"))
+                    {
+                        Instantiate(slime, new Vector2(newOpenScroll.transform.position.x, newOpenScroll.transform.position.y + 0.5f), Quaternion.identity, newOpenScroll.transform);
+                        newOpenScroll.GetComponent<OpenedScroll>().Init(newOpenScroll, slime, scroll.rewardGold);
+                    }
+
+                    Destroy(hit.collider.gameObject); // 말려있는 두루마리 제거
+
                 }
             }
         }
@@ -81,7 +93,7 @@ public class GameSceneManager : MonoBehaviour
         return clampedPos;
     }
 
-    private void MonsterAction(GameObject monster)
+    private void MonsterClickAction(GameObject monster)
     {
         Transform child = monster.transform.Find("NewQuestMark");
         if (child == null)
@@ -90,18 +102,24 @@ public class GameSceneManager : MonoBehaviour
         }
         else
         {
-            MakingScroll(scrollMovingSpot.transform.position);
+            MakingScroll(scrollMovingSpot.transform.position, monster);
             Destroy(child.gameObject); // 퀘스트 마크 제거
         }
     }
 
-    private void MakingScroll(Vector2 pos)
+    private void MakingScroll(Vector2 pos, GameObject monster)
     {
         currentQuestNumber++;
 
 
         // 두루마리 생성
         GameObject newScroll = Instantiate(scroll, new Vector2(pos.x, pos.y), Quaternion.identity);
+
+        if (monster.name.Contains("Slime"))
+        {
+            Debug.Log("1111");
+            newScroll.GetComponent<Scroll>().Init(newScroll, slime, 34);
+        }
 
         Debug.Log("두루마리 생성됨: " + currentQuestNumber);
     }

@@ -2,7 +2,10 @@
 
 public class Scroll: MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public GameObject scroll;
+    public GameObject targetMonster;
+    public int rewardGold;
+
     void Start()
     {
         
@@ -12,6 +15,13 @@ public class Scroll: MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void Init(GameObject scroll, GameObject targetMonster,int reward)
+    {
+        this.scroll = scroll;
+        this.targetMonster = targetMonster;
+        this.rewardGold = reward;
     }
 
     private void floating()
