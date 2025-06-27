@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8214852172423409548}
   - component: {fileID: 7349335090922033906}
   - component: {fileID: 6874630446157237080}
+  - component: {fileID: 5278003714923208411}
   m_Layer: 0
   m_Name: Scroll
   m_TagString: Untagged
@@ -169,3 +170,15 @@ PolygonCollider2D:
       - {x: 0.5, y: -0.0625}
       - {x: -0.21875, y: 0.5}
   m_UseDelaunayMesh: 0
+--- !u!114 &5278003714923208411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3935617202229602683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfbf944aa1f09164ca867b12778a68a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
