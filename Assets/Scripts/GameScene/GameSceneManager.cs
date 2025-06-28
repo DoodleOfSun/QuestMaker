@@ -1,4 +1,5 @@
-﻿using Unity.VisualScripting;
+﻿using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -10,6 +11,10 @@ public class GameSceneManager : MonoBehaviour
     public GameObject scrollLimit2;
     public GameObject scrollMovingSpot;
 
+    public AudioClip monsterQuestSound;
+    public AudioClip scrollPaperSound;
+    public AudioSource additionalSFX;
+
     public GameObject slime;
 
     public int questLimitNumber = 3;    // 최대 퀘스트 제한
@@ -17,10 +22,13 @@ public class GameSceneManager : MonoBehaviour
 
     private Vector2 currentRefScroll;
 
+    public List<GameObject> monsterSpawnSpots = new List<GameObject>(); // 몬스터 스폰 위치 리스트
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        //additionalSFX.volume = FindAnyObjectByType<AudioManager>().sfxVolume; // SFX 볼륨 설정
+        additionalSFX.volume = 0.5f; // SFX 볼륨 설정 (임시로 0.5f로 설정, AudioManager에서 가져오는 것으로 변경 가능) 이욜 좀치네
     }
 
     // Update is called once per frame
@@ -43,6 +51,7 @@ public class GameSceneManager : MonoBehaviour
                 // 몬스터 클릭한 경우
                 if (hit.collider.name.Contains("Monster") && currentQuestNumber <= questLimitNumber)
                 {
+                    additionalSFX.PlayOneShot(monsterQuestSound); // 몬스터 퀘스트 사운드 재생
                     MonsterClickAction(hit.collider.gameObject);
                     return;
                 }
@@ -67,7 +76,7 @@ public class GameSceneManager : MonoBehaviour
                 // 두루마리를 클릭함
                 else if(hit.collider.name.Equals("Scroll(Clone)"))
                 {
-
+                    additionalSFX.PlayOneShot(scrollPaperSound); // 두루마리 클릭 사운드 재생 올 ㅋㅋ
                     Scroll scroll = hit.collider.gameObject.GetComponent<Scroll>();
                     GameObject newOpenScroll = Instantiate(openedScroll, new Vector2(mousePos.x, mousePos.y + 0.5f), Quaternion.identity);
 

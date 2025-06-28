@@ -8,7 +8,7 @@ public class AudioManager : MonoBehaviour
     private Slider bgmSlider;
     private Slider sfxSlider;
     private float bgmVolume = 1.0f;
-    private float sfxVolume = 1.0f;
+    public float sfxVolume = 1.0f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
