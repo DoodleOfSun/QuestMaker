@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class GameSceneManager : MonoBehaviour
 {
+    public static GameSceneManager instance;
     public GameObject scroll;
     public GameObject openedScroll;
     public GameObject scrollLimit1;
@@ -15,7 +16,11 @@ public class GameSceneManager : MonoBehaviour
     public AudioClip scrollPaperSound;
     public AudioSource additionalSFX;
 
-    public GameObject slime;
+    public GameObject slimeForMaps;
+    public GameObject slimeForScroll;
+
+    public int gameLevel = 1;
+
 
     public int questLimitNumber = 3;    // 최대 퀘스트 제한
     private int currentQuestNumber = 0; // 현제 퀘스트 숫자
@@ -25,10 +30,21 @@ public class GameSceneManager : MonoBehaviour
     public List<GameObject> monsterSpawnSpots = new List<GameObject>(); // 몬스터 스폰 위치 리스트
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
+        if(instance == null)
+        {
+            instance = this;
+        }
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+        }
         //additionalSFX.volume = FindAnyObjectByType<AudioManager>().sfxVolume; // SFX 볼륨 설정
         additionalSFX.volume = 0.5f; // SFX 볼륨 설정 (임시로 0.5f로 설정, AudioManager에서 가져오는 것으로 변경 가능) 이욜 좀치네
+        gameLevel = 1;
+
+
     }
 
     // Update is called once per frame
@@ -82,8 +98,8 @@ public class GameSceneManager : MonoBehaviour
 
                     if (scroll.targetMonster.name.Contains("Slime"))
                     {
-                        Instantiate(slime, new Vector2(newOpenScroll.transform.position.x, newOpenScroll.transform.position.y + 0.5f), Quaternion.identity, newOpenScroll.transform);
-                        newOpenScroll.GetComponent<OpenedScroll>().Init(newOpenScroll, slime, scroll.rewardGold);
+                        Instantiate(slimeForScroll, new Vector2(newOpenScroll.transform.position.x, newOpenScroll.transform.position.y + 0.5f), Quaternion.identity, newOpenScroll.transform);
+                        newOpenScroll.GetComponent<OpenedScroll>().Init(newOpenScroll, slimeForScroll, scroll.rewardGold);
                     }
 
                     Destroy(hit.collider.gameObject); // 말려있는 두루마리 제거
@@ -119,15 +135,13 @@ public class GameSceneManager : MonoBehaviour
     private void MakingScroll(Vector2 pos, GameObject monster)
     {
         currentQuestNumber++;
-
-
         // 두루마리 생성
         GameObject newScroll = Instantiate(scroll, new Vector2(pos.x, pos.y), Quaternion.identity);
 
         if (monster.name.Contains("Slime"))
         {
             Debug.Log("1111");
-            newScroll.GetComponent<Scroll>().Init(newScroll, slime, 34);
+            newScroll.GetComponent<Scroll>().Init(newScroll, slimeForScroll, 34);
         }
 
         Debug.Log("두루마리 생성됨: " + currentQuestNumber);
