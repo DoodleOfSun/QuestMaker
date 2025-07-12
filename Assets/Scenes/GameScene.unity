@@ -206,7 +206,7 @@ Transform:
   m_GameObject: {fileID: 52591916}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: -0.03, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2059,16 +2059,6 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: -179, y: 1011, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 12
-      m_TileSpriteIndex: 12
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
   - m_RefCount: 0
@@ -2095,7 +2085,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 6d3957d4b0b8914409b00f85f2eb2c7c, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 0b0f071ea47ae2042bfab3598941d526, type: 2}
-  - m_RefCount: 2
+  - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: d7ba87c6640b086419bffd25d33e6747, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 0
@@ -2122,10 +2112,10 @@ Tilemap:
     m_Data: {fileID: 159902413, guid: 4c27a6e323f7b0c4681278f656c5b469, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 572609585066318759, guid: 4c27a6e323f7b0c4681278f656c5b469, type: 3}
-  - m_RefCount: 2
+  - m_RefCount: 1
     m_Data: {fileID: 63188079, guid: df3050a7d16a6de41bc3c0c6c116c8e5, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 41
+  - m_RefCount: 40
     m_Data:
       e00: 1
       e01: 0
@@ -2144,7 +2134,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 41
+  - m_RefCount: 40
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -5320,16 +5310,6 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: -179, y: 1011, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 12
-      m_TileSpriteIndex: 12
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
   - m_RefCount: 3
@@ -5356,7 +5336,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: d342a5f7e9aff014682e090bcf735257, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 2a5f23832d92c0e4caf05dc42fc40e7f, type: 2}
-  - m_RefCount: 2
+  - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: d7ba87c6640b086419bffd25d33e6747, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 4
@@ -5383,10 +5363,10 @@ Tilemap:
     m_Data: {fileID: -2046774713, guid: df3050a7d16a6de41bc3c0c6c116c8e5, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -753136331, guid: df3050a7d16a6de41bc3c0c6c116c8e5, type: 3}
-  - m_RefCount: 2
+  - m_RefCount: 1
     m_Data: {fileID: 63188079, guid: df3050a7d16a6de41bc3c0c6c116c8e5, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 38
+  - m_RefCount: 37
     m_Data:
       e00: 1
       e01: 0
@@ -5405,7 +5385,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 38
+  - m_RefCount: 37
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -10730,7 +10710,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 400, y: 300}
+  m_SizeDelta: {x: 400, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1485066076
 MonoBehaviour:
@@ -15264,14 +15244,17 @@ MonoBehaviour:
   openedScroll: {fileID: 5876448908795685194, guid: f19c799289bbea54e9d6d5e4f50d6c1f, type: 3}
   scrollLimit1: {fileID: 218311366}
   scrollLimit2: {fileID: 1997162637}
-  scrollMovingSpot: {fileID: 926004475}
+  scrollSpawnFirstSpot: {fileID: 926004475}
   monsterQuestSound: {fileID: 8300000, guid: 523b26e55aaab78418be759715fe110c, type: 3}
   scrollPaperSound: {fileID: 8300000, guid: 754085ed9652a3c48a8b6dd5ad5cc4e8, type: 3}
   additionalSFX: {fileID: 1072443738}
-  slimeForMaps: {fileID: 3771924119106765899, guid: 3b6acb02c473d8f4c9a2ba58ca8ab61d, type: 3}
-  slimeForScroll: {fileID: 3882264565233020937, guid: 97f091c66bc9cc742911de9a9e124a55, type: 3}
   gameLevel: 0
   questLimitNumber: 3
+  monsterList:
+  - name: Slime
+    monsterForMaps: {fileID: 3771924119106765899, guid: 3b6acb02c473d8f4c9a2ba58ca8ab61d, type: 3}
+    monsterForScroll: {fileID: 3882264565233020937, guid: 97f091c66bc9cc742911de9a9e124a55, type: 3}
+    rewardGold: 34
   monsterSpawnSpots: []
 --- !u!114 &1752909862
 MonoBehaviour:

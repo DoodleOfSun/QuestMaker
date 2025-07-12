@@ -60,7 +60,6 @@ public class SelectRandomMap : MonoBehaviour
                 }
             }
 
-
         }
 
 
@@ -106,7 +105,7 @@ public class SelectRandomMap : MonoBehaviour
                 int i = 0;
                 while (i < 8)
                 {
-                    Vector2 randomSpot = spawnSpotList[Random.Range(0, 8)];
+                    Vector2 randomSpot = spawnSpotList[Random.Range(0, spawnSpotList.Count)];
 
                     for (int j = 0; j < spawnSpots.Count; j++)
                     {
@@ -138,7 +137,7 @@ public class SelectRandomMap : MonoBehaviour
                 int i = 0;
                 while (i < 8)
                 {
-                    Vector2 randomSpot = spawnSpotList[Random.Range(0, 8)];
+                    Vector2 randomSpot = spawnSpotList[Random.Range(0, spawnSpotList.Count)];
 
                     for (int j = 0; j < spawnSpots.Count; j++)
                     {
@@ -170,9 +169,7 @@ public class SelectRandomMap : MonoBehaviour
             {
                 for (int i = 0; i < spawnSpots.Count; i++)
                 {
-                    Debug.Log(spawnSpots[i]);
-
-                    GameObject monster = Instantiate(GameSceneManager.instance.slimeForMaps, spawnSpots[i], Quaternion.identity);
+                    GameObject monster = Instantiate(GameSceneManager.instance.monsterList[0].monsterForMaps, spawnSpots[i], Quaternion.identity);
                 }
             }
         }
@@ -186,7 +183,7 @@ public class SelectRandomMap : MonoBehaviour
                 {
                     Debug.Log(spawnSpots[i]);
 
-                    GameObject monster = Instantiate(GameSceneManager.instance.slimeForMaps, spawnSpots[i], Quaternion.identity);
+                    GameObject monster = Instantiate(GameSceneManager.instance.monsterList[0].monsterForMaps, spawnSpots[i], Quaternion.identity);
                 }
             }
         }
