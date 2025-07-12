@@ -26,7 +26,6 @@ public class OpenedScroll : MonoBehaviour
         this.targetMonster = targetMonster;
         this.rewardGold = reward;
         rewardGoldText = GetComponentInChildren<Text>();
-        Debug.Log(rewardGoldText.text);
         rewardGoldText.text = rewardGold.ToString() + "G"; // 보상 금액 텍스트 설정
     }
 

@@ -61,6 +61,8 @@ public class GameSceneManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Debug.Log(scrollListIndex);
+        //Debug.Log(scrollList.Count);
         CheckingMouseControl();
     }
 
@@ -81,6 +83,27 @@ public class GameSceneManager : MonoBehaviour
                     MonsterClickAction(hit.collider.gameObject);
                     return;
                 }
+
+                // 두루마리를 클릭함
+                else if (hit.collider.name.Equals("Scroll(Clone)"))
+                {
+                    additionalSFX.PlayOneShot(scrollPaperSound); // 두루마리 클릭 사운드 재생
+
+                    MovingScrollByClicking(hit.collider.gameObject);
+
+                    Scroll scroll = hit.collider.gameObject.GetComponent<Scroll>();
+                    GameObject newOpenScroll = Instantiate(openedScroll, new Vector2(mousePos.x, mousePos.y + 0.5f), Quaternion.identity);
+
+                    if (scroll.targetMonster.name.Contains("Slime"))
+                    {
+                        Instantiate(monsterList[0].monsterForScroll, new Vector2(newOpenScroll.transform.position.x, newOpenScroll.transform.position.y + 0.5f), Quaternion.identity, newOpenScroll.transform);
+                        newOpenScroll.GetComponent<OpenedScroll>().Init(newOpenScroll, monsterList[0].monsterForScroll, scroll.rewardGold);
+                    }
+
+                    RemovingList(scrollList.IndexOf(hit.collider.gameObject)); // 두루마리 리스트에서 제거
+
+                    return;
+                }
             }
         }
 
@@ -97,26 +120,6 @@ public class GameSceneManager : MonoBehaviour
                 {
                     hit.collider.gameObject.transform.position = new Vector2(mousePos.x, mousePos.y + 0.5f); // 두루마리 위치 조정
                     hit.collider.transform.position = ClampScroll(hit.collider.gameObject.transform.position);
-                    return;
-                }
-
-                // 두루마리를 클릭함
-                else if(hit.collider.name.Equals("Scroll(Clone)"))
-                {
-                    additionalSFX.PlayOneShot(scrollPaperSound); // 두루마리 클릭 사운드 재생
-
-                    MovingScrollByClicking(hit.collider.gameObject);
-
-                    Scroll scroll = hit.collider.gameObject.GetComponent<Scroll>();
-                    GameObject newOpenScroll = Instantiate(openedScroll, new Vector2(mousePos.x, mousePos.y + 0.5f), Quaternion.identity);
-
-                    if (scroll.targetMonster.name.Contains("Slime"))
-                    {
-                        Instantiate(monsterList[0].monsterForScroll, new Vector2(newOpenScroll.transform.position.x, newOpenScroll.transform.position.y + 0.5f), Quaternion.identity, newOpenScroll.transform);
-                        newOpenScroll.GetComponent<OpenedScroll>().Init(newOpenScroll, monsterList[0].monsterForScroll, scroll.rewardGold);
-                    }
-
-                    Destroy(hit.collider.gameObject); // 말려있는 두루마리 제거
                     return;
                 }
             }
@@ -177,47 +180,47 @@ public class GameSceneManager : MonoBehaviour
 
     private void MovingScrollByClicking(GameObject scroll)
     {
-        Debug.Log("스크롤 스폰 스팟의 인덱스 번호 : " + scrollList.IndexOf(scroll));
         int selectedIndex = scrollList.IndexOf(scroll);
-
         Vector3 currentVec = Vector3.zero;
 
         for (int i = selectedIndex; i < scrollList.Count - 1; i++)
         {
             GameObject nextScroll = scrollList[i + 1];
-            Vector3 targetPos = new Vector3(scrollList[i].transform.position.x, nextScroll.transform.position.y, nextScroll.transform.position.z);
-            StartCoroutine(MoveScroll(nextScroll, targetPos));
-        }
-
-        if (selectedIndex >= 0 && selectedIndex < scrollList.Count)
-        {
-            if (scrollList[selectedIndex] != null)
+            if (nextScroll == null)
             {
-                scrollList.RemoveAt(selectedIndex);
+                return;
             }
+            Vector3 targetPos = new Vector3(scrollList[i].transform.position.x, nextScroll.transform.position.y, nextScroll.transform.position.z);
+            StartCoroutine(MoveScroll(nextScroll, targetPos, selectedIndex));
         }
-
-        scrollListIndex--;
     }
 
-    private IEnumerator MoveScroll(GameObject scroll, Vector3 targetPos)
+    private IEnumerator MoveScroll(GameObject scroll, Vector3 targetPos, int selectedIndex)
     {
-        if (scroll == null || targetPos == null)
+        if (scrollList.Count == 1)
         {
-            yield return null;
+            Vector3 velocity = Vector3.zero;
+            while (Vector3.Distance(scroll.transform.position, scrollSpawnFirstSpot.transform.position) > 0.01f)
+            {
+                scroll.transform.position = Vector3.SmoothDamp(scroll.transform.position, scrollSpawnFirstSpot.transform.position, ref velocity, 0.2f);
+                yield return null;
+            }
         }
         else
         {
             Vector3 velocity = Vector3.zero;
-            while (Vector3.Distance(scroll.transform.position, targetPos) > 0.01f)
+            while (scroll != null && targetPos != null && Vector3.Distance(scroll.transform.position, targetPos) > 0.01f)
             {
-                scroll.transform.position = Vector3.SmoothDamp(scroll.transform.position, targetPos, ref velocity, 0.8f);
+                scroll.transform.position = Vector3.SmoothDamp(scroll.transform.position, targetPos, ref velocity, 0.2f);
                 yield return null;
             }
-            scroll.transform.position = targetPos; // 최종 위치 정확히 설정
         }
-
     }
 
-
+    private void RemovingList(int selectedIndex)
+    {
+        Destroy(scrollList[selectedIndex]);
+        scrollList.RemoveAt(selectedIndex);
+        scrollListIndex--;
+    }
 }
